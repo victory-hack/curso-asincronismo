@@ -19,3 +19,13 @@ countCows.then((result) => {
 }).finally(() => {
   console.log('Finally')
 })
+
+const delay = (time, message) => {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve(message)
+    }, time);
+  })
+}
+
+delay(2000, 'Hello after 2s').then(result => { console.log(result)})
