@@ -1,4 +1,7 @@
-const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+// "type": "commonjs"
+//const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+//"type": "module"
+import { XMLHttpRequest } from 'xmlhttprequest'
 
 const API = 'https://api.escuelajs.co/api/v1';
 

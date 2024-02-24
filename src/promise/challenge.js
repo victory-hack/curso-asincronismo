@@ -15,7 +15,7 @@ const fetchData = (urlApi) => {
 fetchData(`${API}/products`)
   .then(response => response.json())
   .then(products => {
-    console.log('🚀 > file: challenge.js > line 18 > products', products)
+    console.log('🚀 > file: challenge.js > line 18 > products', products[0])
     return fetchData(`${API}/products/${products[0].id}`)
   })
   .then(response => response.json())
@@ -25,7 +25,9 @@ fetchData(`${API}/products`)
   })
   .then(response => response.json())
   .then(category => {
-    console.log(category)
+    console.log('🚀 > category:', category)
   })
-  .catch(error => console.log(error))
-  .finally(() => console.log('Finally'));
+  .catch(error => {
+    console.log('🚀 > error:', error);
+  })
+  .finally(() => console.log('🚀 > Finally'));

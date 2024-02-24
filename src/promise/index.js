@@ -1,6 +1,10 @@
 const promise = new Promise((resolve, rejected) => {
   resolve('Hey!')
-})
+});
+
+promise.then((result) => {
+  console.log(result)
+});
 
 const cows = 5;
 
@@ -28,4 +32,9 @@ const delay = (time, message) => {
   })
 }
 
-delay(2000, 'Hello after 2s').then(result => { console.log(result)})
+delay(2000, 'Hello after 2s')
+  .then(
+    result => {
+      console.log(result);
+    }
+  );

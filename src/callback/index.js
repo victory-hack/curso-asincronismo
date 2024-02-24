@@ -16,11 +16,11 @@ setTimeout(() => {
   console.log('Hola JavaScript')
 }, 2000);
 
-function gretting(name) {
-  console.log(`Hola ${name}`)
+function gretting(name, lastName) {
+  console.log(`Hola ${name} ${lastName}`)
 }
 
-setTimeout(gretting, 2000, "Oscar");
+setTimeout(gretting, 2000, "Victor Hugo", "Canete");
 
 setTimeout((num1, num2) => {
   console.log(num1 + num2);
